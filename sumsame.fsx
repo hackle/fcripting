@@ -33,12 +33,12 @@ let findSeqsBySum sum =
 
 // findBetween 5 10
 // findBetween 7 16
-// findBetween 99 110
-// findBetween 1000 1050 // quite fast
-// findBetween 1000 1100 // a bit laggy
-// findBetween 1000 1200 // still works but 5 seconds wait
+// findBetween 99 110 // 4 
+// findBetween 1000 1050 // 13 results, quite fast
+// findBetween 1000 1100 // 21 results, a bit laggy
+// findBetween 1000 1200 // 36, still works but 5 seconds wait
 // findBetween 1000 1300 // 10 seconds!
-// findBetween 1000 2000 // 35 seconds
+// findBetween 1000 2000 // finishes in 35 seconds, but iterating will freeze
 let findBetween (a: int) (b: int) =
     seq {
         let sum = sumByDigits [ a .. b ]
